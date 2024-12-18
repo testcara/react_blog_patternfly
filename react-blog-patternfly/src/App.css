@@ -1,0 +1,64 @@
+
+.header {
+  background-color: #ccc;
+  padding: 10px;
+  position: fixed;
+  margin-left: 5%;
+  margin-right: 5%;
+  top: 5%;
+  width: 90%;
+  height: 10%;
+  font-size: large;
+}
+.footer {
+  background-color: #ccc;
+  padding: 10px;
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
+  right: 5%;
+  text-align: center;
+  width: 90%;
+  height: 10%;
+  border-radius: 4px;
+}
+.usertab {
+  top:8%;
+  text-align: right;
+  width: 90%;
+  padding: 10px;
+
+}
+.cardSummary {
+  display: "-webkit-box",
+}
+
+.inner {
+  background-color: #cfdee4;
+  padding: 10px;
+  position: fixed;
+  top: 11%;
+  bottom: 6%;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+  border: 1px solid #b2a53d;
+  border-radius: 4px;
+  overflow-y: auto;
+  /* Added overflow for scrolling */
+}
+.blog-card-body {
+    white-space: pre-wrap; /* Preserve line breaks and spaces */
+    max-height: 800px; /* Set the max height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds max height */
+    overflow-x: hidden; /* Hide horizontal scrolling */
+    padding:2px;
+}
+.blog-card-span {
+  padding: 5px;
+  /* Optional padding */
+}
+.post-form-textarea {
+  max-height: 600px;
+  overflow-y: auto;
+}
