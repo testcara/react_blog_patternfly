@@ -28,7 +28,7 @@ const EditPost = () => {
   };
 
   const handleSuccess = () => {
-    navigate("/");
+    navigate(`/post/${currentPost.id}`);
   };
 
   return currentPost ? (

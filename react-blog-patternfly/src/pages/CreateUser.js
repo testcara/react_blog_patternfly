@@ -1,16 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {
-  Button,
-  Grid,
-  GridItem,
-  Form,
-  FormGroup,
-  TextInput,
-  Alert,
-} from "@patternfly/react-core";
+import { Grid, GridItem } from "@patternfly/react-core";
 import { FetchData, AppendData } from "../utils/DataUtils";
 import { AlertSuccessModal } from "../utils/AlertModalUtils";
+import AuthForm from "../utils/AuthForm";
 
 const CreateUser = () => {
   const [username, setUsername] = useState("");
@@ -44,26 +37,15 @@ const CreateUser = () => {
       <div className="inner">
         <Grid>
           <GridItem span={4}>
-            <Form onSubmit={handleSubmit}>
-              <FormGroup label="用户名">
-                <TextInput
-                  isRequired
-                  id="username"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                />
-              </FormGroup>
-              <FormGroup label="密码">
-                <TextInput
-                  isRequired
-                  id="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-              </FormGroup>
-              {error && <Alert variant="danger" title={error} />}
-              <Button type="submit">创建</Button>
-            </Form>
+            <AuthForm
+              usernameValue={username}
+              setUsernameValue={setUsername}
+              passwordValue={password}
+              setPasswordValue={setPassword}
+              errorMessage={error}
+              submitButtonText="创建"
+              onSubmit={handleSubmit}
+            />
           </GridItem>
         </Grid>
         {/* 提交成功后的Modal */}

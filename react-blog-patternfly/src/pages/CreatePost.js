@@ -19,7 +19,7 @@ const CreatePost = ({ user }) => {
   };
 
   const handleSuccess = () => {
-    navigate("/");
+    navigate("/myposts");
   };
 
   return (
